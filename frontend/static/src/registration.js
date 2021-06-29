@@ -42,7 +42,7 @@ handleSubmit(event){
      <label htmlFor="password2" className="form-label">Confirm Password</label>
      <input onChange={this.handleInput} type="password" className="form-control" id="password2" name='password2'></input>
    </div>
-   <button type="button" className="btn btn-link" onClick={() => this.props.handleForm('login')}>Login</button>
+   <button type="button" className="btn btn-link" onClick={() => this.props.handleNavigation('login')}>Login</button>
    <button type="submit" className="btn btn-primary">REGISTER</button>
  </form>
 )}

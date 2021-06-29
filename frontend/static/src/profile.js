@@ -2,14 +2,13 @@ import { Component } from 'react';
 import Cookies from 'js-cookie';
 import './App.css';
 
-class App extends Component {
+class Profile extends Component {
   constructor(props) {
     super(props);
     this.state = {
       display_name: '',
       avatar: null,
       preview: '',
-      selection: !!Cookies.get('Authorization') ? 'profile' : 'login',
     }
     this.handleInput = this.handleInput.bind(this);
     this.handleImage = this.handleImage.bind(this);
@@ -68,7 +67,7 @@ class App extends Component {
       }
 
       <button type='submit'>Save profile!</button>
-      <button className="logout-button" onClick={this.props.handleLogout}>Logout</button>
+      <button type="button" className="logout-button" onClick={this.props.handleLogout}>Logout</button>
     </form>
     </>
   );
@@ -76,4 +75,4 @@ class App extends Component {
 }
 
 
-export default App;
+export default Profile;
